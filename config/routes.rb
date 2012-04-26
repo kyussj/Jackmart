@@ -1,4 +1,12 @@
 Jackmart::Application.routes.draw do
+  get "jackmart/home"
+
+  get "jackmart/products"
+
+  get "jackmart/help"
+
+  get "jackmart/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
