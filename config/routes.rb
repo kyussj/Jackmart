@@ -1,11 +1,12 @@
 Jackmart::Application.routes.draw do
-  get "jackmart/home"
 
-  get "jackmart/products"
-
-  get "jackmart/help"
-
-  get "jackmart/contact"
+	
+  match '/help',     to: 'jackmart#help'
+  match '/products', to: 'jackmart#products'
+  match '/contact',  to: 'jackmart#contact'
+  
+  root to: 'jackmart#home'
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
