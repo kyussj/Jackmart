@@ -2,22 +2,17 @@ require 'spec_helper'
 
 describe "Base pages" do
 
+  subject { page }
 
-describe "Home page" do
+  describe "Home page" do
+    before { visit root_path }
 
-  it "should have the content 'Home'" do
-    visit '/'
-    page.should have_content('Home')
-  end
-  
-   it "should have the title 'Home'" do
-      visit '/'
-      page.should have_selector('title',
-                        :text => "Jackmart | Home")
-    end
-  end
+    it { should have_selector('h1', text: 'Home') }
+    it { should have_selector('title', text: full_title('')) }
+    it { should_not have_selector 'title', text: '| Home' }
 
-
+	end
+	
   describe "Help page" do
 
     it "should have the content 'Help'" do
