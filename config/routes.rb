@@ -1,7 +1,9 @@
 Jackmart::Application.routes.draw do
+  get "users/new"
+
   root to: 'jackmart#home'
  
-	
+  match '/signup',   to: 'users#new'	
   match '/help',     to: 'jackmart#help'
   match '/products', to: 'jackmart#products'
   match '/contact',  to: 'jackmart#contact'

@@ -2,15 +2,16 @@ require 'spec_helper'
 
 describe "Base pages" do
 
+
 describe "Home page" do
 
   it "should have the content 'Home'" do
-    visit '/jackmart/home'
+    visit '/'
     page.should have_content('Home')
   end
   
    it "should have the title 'Home'" do
-      visit '/root'
+      visit '/'
       page.should have_selector('title',
                         :text => "Jackmart | Home")
     end
