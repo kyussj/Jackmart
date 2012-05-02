@@ -11,7 +11,7 @@ Jackmart::Application.routes.draw do
   match '/help',     to: 'jackmart#help'
   match '/products', to: 'jackmart#products'
   match '/contact',  to: 'jackmart#contact'
-
+  match '/users',    to: 'jackmart#users'
 
 
 
