@@ -1,14 +1,17 @@
 Jackmart::Application.routes.draw do
     resources :users
+	resources :sessions, only: [:new, :create, :destroy]
 	
-
   root to: 'jackmart#home'
  
   match '/signup',   to: 'users#new'	
+  match '/signin',   to: 'sessions#new'
+  match '/signout',  to: 'sessions#destroy', via: :delete
   match '/help',     to: 'jackmart#help'
   match '/products', to: 'jackmart#products'
   match '/contact',  to: 'jackmart#contact'
-  
+
+
 
 
   # The priority is based upon order of creation:
