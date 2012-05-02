@@ -1,3 +1,5 @@
 == Welcome to Jackmart
 
 == 67 passing spec tests and 8 cucumber
+
+Quick test
