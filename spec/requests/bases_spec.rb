@@ -9,7 +9,7 @@ describe "Base pages" do
 
     it { should have_selector('h1', text: 'Home') }
     it { should have_selector('title', text: full_title('')) }
-    it { should_not have_selector 'title', text: '| Home' }
+
 
 	end
 	
