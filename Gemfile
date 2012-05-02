@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
-gem 'bcrypt-ruby', '3.0.1'
+gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -23,6 +23,7 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
+  gem 'factory_girl_rails', '1.4.0'
 end
 
 group :production do

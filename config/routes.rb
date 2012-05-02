@@ -1,5 +1,6 @@
 Jackmart::Application.routes.draw do
-  get "users/new"
+    resources :users
+	
 
   root to: 'jackmart#home'
  
