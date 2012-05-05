@@ -18,6 +18,7 @@ end
   it { should respond_to(:authenticate) }  
   it { should respond_to(:admin) }
   it { should respond_to(:authenticate) }
+  it { should respond_to(:posts) }
 
 
 
@@ -115,4 +116,12 @@ end
 
     it { should be_admin }
   end
+  
+   it "should destroy associated posts" do
+      posts = @user.posts
+      @user.destroy
+      posts.each do |post|
+        Post.find_by_id(post.id).should be_nil
+      end
+    end
 end
