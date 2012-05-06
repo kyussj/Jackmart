@@ -1,16 +1,20 @@
 <% if signed_in? %>
+<h1>What are you thinking?</h1>
+<h2>Your profile page</h2>
   <div class="row">
-    <aside class="span4">
+    <aside class="span7">
       <section>
         <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/friends' %>
       </section>
       <section>
         <%= render 'shared/post_form' %>
       </section>
     </aside>
-  </div>  
-      <div class="span8">
-      <h3>Blog Feed</h3>
+    <div class="span5">
+      <h3>All blogs</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>

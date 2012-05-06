@@ -7,8 +7,12 @@
         <%= @user.name %>
       </h1>
     </section>
+	    <section>
+      <%= render 'shared/friends' %>
+    </section>
   </aside>
   <div class="span8">
+      <%= render 'follow_form' if signed_in? %>
     <% if @user.posts.any? %>
       <h3>Blog Entries (<%= @user.posts.count %>)</h3>
       <ol class="posts">
