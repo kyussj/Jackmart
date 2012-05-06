@@ -6,9 +6,6 @@ class JackmartController < ApplicationController
 	end
   end
 
-  def products
-  end
-
   def help
   end
 

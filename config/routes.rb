@@ -16,7 +16,6 @@ Jackmart::Application.routes.draw do
   match '/signout',  to: 'sessions#destroy', via: :delete
   
   match '/help',     to: 'jackmart#help'
-  match '/products', to: 'jackmart#products'
   match '/contact',  to: 'jackmart#contact'
   match '/users',    to: 'jackmart#users'
 
