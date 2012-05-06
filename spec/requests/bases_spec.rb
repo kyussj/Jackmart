@@ -40,18 +40,4 @@ describe "Base pages" do
                         :text => "Jackmart | Contact")
     end
   end
-  
-      describe "Products page" do
-
-    it "should have the content 'Products'" do
-      visit '/products'
-      page.should have_content('Products')
-    end
-  
-     it "should have the title 'Products'" do
-      visit '/products'
-      page.should have_selector('title',
-                        :text => "Jackmart | Products")
-    end
-  end
 end
