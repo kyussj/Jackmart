@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-    before_filter :signed_in_user, only: [:edit, :update]
+  before_filter :signed_in_user,
+                only: [:index, :edit, :update, :destroy, :following, :followers]
 	before_filter :correct_user,   only: [:edit, :update]
 	before_filter :admin_user,     only: :destroy
 	
@@ -13,22 +14,21 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
   end
   
   def create
     @user = User.new(params[:user])
-	
-	respond_to do |format|
+#	respond_to do |format|
     if @user.save
-	  UserMailer.welcome_email(@user).deliver
+	  #UserMailer.welcome_email(@user).deliver
       sign_in @user
-      format.html { redirect_to(@user, :notice => 'Welcome to the Jackmart app!') }
+	  redirect_to @user
+   #   format.html { redirect_to(@user, :notice => 'Welcome to the Jackmart app!') }
     else
       render 'new'
     end
   end
-  end
+ # end
   
   def update
     if @user.update_attributes(params[:user])
