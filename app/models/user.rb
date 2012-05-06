@@ -16,7 +16,6 @@ class User < ActiveRecord::Base
   
   
   def feed
- 
    Post.where("user_id = ?", id)
   end
   

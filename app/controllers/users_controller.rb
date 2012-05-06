@@ -18,13 +18,15 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
+	respond_to do |format|
     if @user.save
+	  UserMailer.welcome_email(@user).deliver
       sign_in @user
-      flash[:success] = "Welcome to the Jack's App!"
-      redirect_to @user
+      format.html { redirect_to(@user, :notice => 'Welcome to the Jackmart app!') }
     else
       render 'new'
     end
+  end
   end
   
   def update
