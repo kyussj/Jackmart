@@ -46,9 +46,9 @@ describe Post do
 
     before { user.follow!(other_user) }
 
-    let(:own_post) { user.posts.create!(content: "foo") }
-    let(:followed_post) { other_user.posts.create!(content: "bar") }
-    let(:unfollowed_post) { third_user.posts.create!(content: "baz") }
+    let(:own_post) { user.posts.create!(content: "easy") }
+    let(:followed_post) { other_user.posts.create!(content: "as") }
+    let(:unfollowed_post) { third_user.posts.create!(content: "pie") }
 
     subject { Post.from_users_followed_by(user) }
 
