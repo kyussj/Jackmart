@@ -106,10 +106,6 @@ footer {
   }
 }
 
-/* mixins, variables, etc. */
-
-$grayMediumLight: #eaeaea;
-
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
@@ -246,7 +242,7 @@ input, textarea, select, .uneditable-input {
 }
 aside {
   textarea {
-    height: 100px;
+    height: 300px;
     margin-bottom: 5px;
   }
 }
