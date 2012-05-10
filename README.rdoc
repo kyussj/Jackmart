@@ -1,9 +1,10 @@
 == Welcome to Jackmart
 
-== 90 passing spec tests and 8 cucumber
+This is the git repository for Jack Booth's AWAD individual assessment.
 
-This is the git repository for Jack Booth's AWAD individual assessment. This piece of code
-is a basic blogging website with such features as:
+== 98 passing spec tests and 8 cucumber
+
+This piece of code is a basic blogging website with such features as:
 
 * Active mailer
 * Search
@@ -13,5 +14,12 @@ is a basic blogging website with such features as:
 * Use of Ajax
 * Javacript
 * SSL
+
+Future additions to the app:
+
+*	Improved security features
+*	More search functions that allow searching blogs for keywords
+*	Ability to upload pictures to blog entry
+
 
 If you have any questions about the application please email jackmartrails@googlemail.com
