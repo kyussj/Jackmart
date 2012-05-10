@@ -20,7 +20,7 @@ describe Relationship do
     end    
   end
   
-  describe "follower methods" do
+  describe "blog subscription methods" do
     before { relationship.save }
 
     it { should respond_to(:follower) }

@@ -4,7 +4,7 @@ require 'spec_helper'
 describe Post do
 
   let(:user) { FactoryGirl.create(:user) }
-  before { @post = user.posts.build(content: "Lorem ipsum") }
+  before { @post = user.posts.build(content: "This is a test post") }
 
   subject { @post }
 
@@ -33,7 +33,7 @@ describe Post do
     it { should_not be_valid }
   end
 
-  describe "with blank content" do
+  describe "with no content in post content" do
     before { @post.content = " " }
     it { should_not be_valid }
   end

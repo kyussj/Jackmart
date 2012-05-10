@@ -4,7 +4,7 @@ describe User do
 
 before do
   @user = User.new(name: "Example User", email: "user@example.com", 
-                   password: "foobar", password_confirmation: "foobar")
+                   password: "password", password_confirmation: "password")
 end
 
   subject { @user }
@@ -29,7 +29,7 @@ end
   it { should be_valid }
   it { should_not be_admin }
 
-  describe "when name is not present" do
+  describe "when name is not entered (dofus)" do
     before { @user.name = " " }
     it { should_not be_valid }
   end
@@ -39,7 +39,7 @@ end
     it { should_not be_valid }
   end
   
-    describe "when name is too long" do
+    describe "when name is far tooooooooooooooo long for this application" do
     before { @user.name = "a" * 41 }
     it { should_not be_valid }
   end
@@ -54,7 +54,7 @@ end
     end
   end
 
-  describe "when email format is valid" do
+  describe "when email format is legit" do
     it "should be valid" do
       addresses = %w[user@pass.com A_USER@f.b.org frst.lst@pass.jp a+b@baz.cn]
       addresses.each do |valid_address|
@@ -64,7 +64,7 @@ end
     end
   end
   
-  describe "when email address is already taken" do
+  describe "when email address is already taken by some other user" do
     before do
       user_with_same_email = @user.dup
 	  user_with_same_email.email = @user.email.upcase
@@ -89,7 +89,7 @@ end
     it { should_not be_valid }
   end
   
-   describe "with a password that's too short" do
+   describe "with a password that is 2 shrt" do
     before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
   end
@@ -121,7 +121,7 @@ end
     it { should be_admin }
   end
   
-   it "should destroy associated posts" do
+   it "should destroy associated blog entries" do
       posts = @user.posts
       @user.destroy
       posts.each do |post|
